@@ -1,2 +1,6 @@
 # email_retriever
-Basic imap email retriever, enter details inside ENV.
+
+!! THIS IS A TEMPLATE PROGRAM
+
+Basic IMAP email retriever, enter details inside the .env file.
+Add your own functionalities to it.
