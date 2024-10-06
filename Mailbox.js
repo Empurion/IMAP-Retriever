@@ -20,13 +20,10 @@ module.exports = class Mailbox {
       };
 
     constructor(address, password, host, port){
-
         this.imapConfig.user = address
         this.imapConfig.password = password
         this.imapConfig.host = host
         this.imapConfig.port = port
-        console.log(this)
-
     }
     async build(){
         try {
@@ -58,13 +55,11 @@ module.exports = class Mailbox {
     async onReady(){
         await this.getEmails()
     }
-    async onError(){
-
+    async onError(error){
+            console.log(error)
     }
     async onEnd(){
-
-    }
-    async getUnreadEmailByInbox(mailbox){
+            console.log('connection closed.')
     }
     async getEmails(){
         this.imap.openBox('INBOX', false, () => {
